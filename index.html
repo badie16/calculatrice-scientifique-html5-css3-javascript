@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link href="css/style.css" rel="stylesheet"/>
+	<title>CALCULATRICE SCIENTIFIQUE EN JAVASCRIPT</title>
+</head>
+<body>
+	<h2>CALCULATRICE SCIENTIFIQUE EN JAVASCRIPT</h2>
+
+	<caption>
+	    <marquee direction="left">
+	        	<h3>Ma Calculatrice</h3>
+	    </marquee>
+	</caption>
+	<table>
+	    <tr>
+	        <td colspan="10">
+	            <input type="text" value="" name="box_resultat" size="100" style="height: 50px;" class="resultat" />
+	        </td>
+	    </tr>
+	    <tr>
+	        <td>
+	            <input type="button" value=" on " onclick="reset()" class="bouton" />
+	        </td>
+	        <td>
+	            <input type="button" value=" C " onclick="reset()" class="bouton" />
+	        </td>
+	        <td colspan="5">
+	            <input type="text" readonly="readonly" value="" name="memory" style="width: 200px;height: 40px;" class="memoire" />
+	        </td>
+	        <td>
+	            <input type="button" value=" MS " onclick="memoire(1)" class="bouton" />
+	        </td>
+	        <td>
+	            <input type="button" value=" MR " onclick="memoire(2)" class="bouton" />
+	        </td>
+	        <td>
+	            <input type="button" value=" Off " onclick="eteindre()" class="bouton" />
+	        </td>
+	    </tr>
+	    <tr>
+	        <td>
+	            <input type="button" value=" Sin " onclick="scientific(4)" class="bouton" />
+	        </td>
+	        <td>
+	            <input type="button" value=" Cos " onclick="scientific(5)" class="bouton" />
+	        </td>
+	        <td>
+	            <input type="button" value=" Tan " onclick="scientific(6)" class="bouton" />
+	        </td>
+	        <td>
+	            <input type="button" value=" Pi " onclick="scientific(3)" class="bouton" />
+	        </td>
+	        <td>
+	            <input type="button" value=" Abs " onclick="scientific(2)" class="bouton" />
+	        </td>
+	        <td>
+	            <input type="button" value=" 7 " onclick="saisie(7)" class="numb" />
+	        </td>
+	        <td>
+	            <input type="button" value=" 8 " onclick="saisie(8)" class="numb" />
+	        </td>
+	        <td>
+	            <input type="button" value=" 9 " onclick="saisie(9)" class="numb" />
+	        </td>
+	        <td>
+	            <input type="button" value=" M+ " onclick="memoire(4)" class="operateur" />
+	        </td>
+	        <td>
+	            <input type="button" value=" MC " onclick="memoire(3)" class="operateur" />
+	        </td>
+	    </tr>
+	    <tr>
+	        <td>
+	            <input type="button" value=" Asin " onclick="scientific(11)" class="bouton" />
+	        </td>
+	        <td>
+	            <input type="button" value=" Acos " onclick="scientific(12)" class="bouton" />
+	        </td>
+	        <td>
+	            <input type="button" value=" Atan " onclick="scientific(13)" class="bouton" />
+	        </td>
+	        <td>
+	            <input type="button" value=" Log " onclick="scientific(7)" class="bouton" />
+	        </td>
+	        <td>
+	            <input type="button" value=" Exp " onclick="scientific(8)" class="bouton" />
+	        </td>
+	        <td>
+	            <input type="button" value=" 4 " onclick="saisie(4)" class="numb" />
+	        </td>
+	        <td>
+	            <input type="button" value=" 5 " onclick="saisie(5)" class="numb" />
+	        </td>
+	        <td>
+	            <input type="button" value=" 6 " onclick="saisie(6)" class="numb" />
+	        </td>
+	        <td>
+	            <input type="button" value=" / " onclick="Operation('/')" class="operateur" />
+	        </td>
+	        <td>
+	            <input type="button" value=" * " onclick="Operation('*')" class="operateur" />
+	        </td>
+	    </tr>
+	    <tr>
+	        <td>
+	            <input type="button" value=" Ln " onclick="scientific(10)" class="bouton" />
+	        </td>
+	        <td>
+	            <input type="button" value=" Ln2 " onclick="scientific(9)" class="bouton" />
+	        </td>
+	        <td>
+	            <input type="button" value=" mod " onclick="scientific(19)" class="bouton" />
+	        </td>
+	        <td>
+	            <input type="button" value=" x! " onclick="scientific(15)" class="bouton" />
+	        </td>
+	        <td>
+	            <input type="button" value=" x^y " onclick="Operation('pow')" class="bouton" />
+	        </td>
+	        <td>
+	            <input type="button" value=" 1 " onclick="saisie(1)" class="numb" />
+	        </td>
+	        <td>
+	            <input type="button" value=" 2 " onclick="saisie(2)" class="numb" />
+	        </td>
+	        <td>
+	            <input type="button" value=" 3 " onclick="saisie(3)" class="numb" />
+	        </td>
+	        <td>
+	            <input type="button" value=" - " onclick="Operation('-')" class="operateur" />
+	        </td>
+	        <td rowspan="2">
+	            <input type="button" value=" = " onclick="egal(this)" class="operateur" style="height: 124px;" />
+	        </td>
+	    </tr>
+	    <tr>
+	        <td>
+	            <input type="button" value=" 10^x " onclick="scientific(17)" class="bouton" />
+	        </td>
+	        <td>
+	            <input type="button" value=" 1/x " onclick="scientific(18)" class="bouton" />
+	        </td>
+	        <td>
+	            <input type="button" value=" x² " onclick="scientific(14)" class="bouton" />
+	        </td>
+	        <td colspan="2">
+	            <input type="button" value=" √¯ " onclick="scientific(1)" class="bouton" style="width:127px;" />
+	        </td>
+	        <td>
+	            <input type="button" value=" 0 " onclick="saisie(0)" class="numb" />
+	        </td>
+	        <td>
+	            <input type="button" value=" +/-" onclick="scientific(16)" class="numb" />
+	        </td>
+	        <td>
+	            <input type="button" value=" . " onclick="saisie('.')" class="numb" />
+	        </td>
+	        <td>
+	            <input type="button" value=" + " onclick="Operation('+')" class="operateur" />
+	        </td>
+	    </tr>
+	</table>
+	<br>
+	<span class="directed">Directed by ferry francois bakongo. © 2015 Privacy Policy More ferry francois bakongo.</span>
+	<script src="js/js.min.js"></script>
+</body>
+</html>

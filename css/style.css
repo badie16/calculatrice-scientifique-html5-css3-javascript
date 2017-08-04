@@ -1,0 +1,31 @@
+table {
+    background-color:#FFFFFF;
+    border: 1px solid #C0C0C0;
+    border-radius: 10px;
+    margin: auto;
+}
+td, h3, h2 {
+    text-align:center;
+}
+.numb, .bouton, .operateur {
+    width: 62px;
+    height: 60px;
+    border-radius: 5px;
+}
+.bouton {
+    background-color: #DCDCDC;
+}
+.operateur {
+    background-color:#D2B48C;
+}
+.resultat, .memoire {
+    text-align:right;
+    padding:8px;
+}
+
+.directed{
+    color: rgba(3,2,1,0.3);
+    text-align: justify-all;
+    margin-top: 3%;
+    margin-left: 25%;
+}
